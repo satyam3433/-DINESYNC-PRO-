@@ -1,0 +1,7 @@
+node_modules/
+frontend/dist/
+.env
+*.log
+data/db.json.tmp
+data/db.json
+dinesync-submission.zip

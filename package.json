@@ -1,0 +1,31 @@
+{
+  "name": "dinesync",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Restaurant table, order, and billing dashboard with admin authentication",
+  "scripts": {
+    "start": "npm run build && node backend/server.js",
+    "dev": "node scripts/dev.js",
+    "build": "node scripts/build.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "helmet": "^8.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "lucide-react": "^0.468.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^7.18.5"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.12"
+  }
+}
