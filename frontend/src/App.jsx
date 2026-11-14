@@ -1,4 +1,5 @@
 import { Navigate, Route, Routes } from "react-router-dom";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import { useAuth } from "./context/AuthContext.jsx";
 import DashboardPage from "./pages/DashboardPage.jsx";
 import LoginPage from "./pages/LoginPage.jsx";
@@ -26,10 +27,13 @@ function LoginRoute() {
 
 export default function App() {
   return (
-    <Routes>
-      <Route path="/login" element={<LoginRoute />} />
-      <Route path="/" element={<ProtectedRoute />} />
-      <Route path="*" element={<Navigate to="/" replace />} />
-    </Routes>
+    <>
+      <Routes>
+        <Route path="/login" element={<LoginRoute />} />
+        <Route path="/" element={<ProtectedRoute />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+      <SpeedInsights />
+    </>
   );
 }
